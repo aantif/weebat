@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <%- include('partials/head', { title: 'WeeBat - Paiement de l\'abonnement' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="container my-5">
+    <h1 class="text-danger fw-bold mb-4">Paiement de l’abonnement</h1>
+    
+    <p>
+      Bonjour <strong><%= user.fullName %></strong>,  
+      vous avez choisi l’offre : <strong><%= user.plan %></strong>.
+    </p>
+    <p>
+      Montant mensuel : 
+      <strong><%= subscriptionPrice %> € / mois</strong>
+    </p>
+
+    <!-- Choix du mode de paiement -->
+    <form action="/auth/payment" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Modes de paiement :</label>
+        <div class="form-check mb-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="paymentMethod"
+            id="paypal"
+            value="paypal"
+            checked
+          />
+          <label class="form-check-label" for="paypal">
+            PayPal
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="paymentMethod"
+            id="stripe"
+            value="stripe"
+          />
+          <label class="form-check-label" for="stripe">
+            Carte bancaire (via Stripe)
+          </label>
+        </div>
+      </div>
+
+      <!-- 
+        Pour Stripe, on pourra ajouter un champ caché 
+        ou un placeholder pour intégrer l'élément de carte (via JS).
+      -->
+
+      <button
+        type="submit"
+        class="btn btn-danger rounded-pill px-4"
+      >
+        Procéder au paiement
+      </button>
+    </form>
+
+    <p class="mt-4">
+      <small>
+        Pas d’engagement. Vous pouvez résilier votre abonnement à tout moment.
+      </small>
+    </p>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Intégration des scripts PayPal / Stripe le cas échéant -->
+  <!-- Par exemple, script Stripe, si besoin d'un formulaire de carte : -->
+  <!--
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    // Code d'injection du formulaire Stripe
+  </script>
+  -->
+</body>
+</html>

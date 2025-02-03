@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <%- include('partials/head', { title: 'WeeBat - Créer mon compte' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="container my-5">
+    <h1 class="text-danger fw-bold mb-4">Créer mon compte</h1>
+    
+    <!-- 
+      Formulaire d'inscription 
+      Ajout de toutes les informations personnelles et de facturation.
+    -->
+    <form action="/auth/signup" method="POST">
+      <div class="row">
+        <!-- Coordonnées personnelles -->
+        <div class="col-md-6">
+          <h3 class="mb-3">Informations personnelles</h3>
+
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Nom complet *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              name="fullName"
+              placeholder="Dupont Jean"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse email *</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="exemple@domaine.com"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Numéro de téléphone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="+33 6 12 34 56 78"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe *</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Coordonnées de facturation -->
+        <div class="col-md-6">
+          <h3 class="mb-3">Informations de facturation</h3>
+
+          <div class="mb-3">
+            <label for="billingAddress" class="form-label">Adresse *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="billingAddress"
+              name="billingAddress"
+              placeholder="1 rue de la Paix"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="billingCity" class="form-label">Ville *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="billingCity"
+              name="billingCity"
+              placeholder="Paris"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="billingPostcode" class="form-label">Code Postal *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="billingPostcode"
+              name="billingPostcode"
+              placeholder="75000"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="billingCountry" class="form-label">Pays *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="billingCountry"
+              name="billingCountry"
+              placeholder="France"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Sélection de l'offre -->
+      <div class="my-4">
+        <h4 class="mb-3">Choix de l’offre</h4>
+        <div class="form-check mb-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="plan"
+            id="planBasic"
+            value="basic"
+            checked
+          />
+          <label class="form-check-label" for="planBasic">
+            Offre Basic (Mensuelle, 9,99€/mois)
+          </label>
+        </div>
+        <div class="form-check mb-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="plan"
+            id="planPro"
+            value="pro"
+          />
+          <label class="form-check-label" for="planPro">
+            Offre Pro (Mensuelle, 19,99€/mois)
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="plan"
+            id="planPremium"
+            value="premium"
+          />
+          <label class="form-check-label" for="planPremium">
+            Offre Premium (Mensuelle, 29,99€/mois)
+          </label>
+        </div>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <button
+        type="submit"
+        class="btn btn-danger rounded-pill px-4"
+      >
+        Démarrer mon essai gratuit
+      </button>
+    </form>
+
+    <!-- Déjà inscrit ? -->
+    <div class="mt-4">
+      <p class="fs-5">
+        Déjà inscrit ?  
+        <a href="/auth/login" class="text-danger fw-bold">Connectez-vous</a>  
+        pour accéder à votre compte.
+      </p>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

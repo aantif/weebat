@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <%- include('partials/head', { title: 'WeeBat - Accueil' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="container my-5">
+    <h1 class="text-danger fw-bold mb-4">Fonctionnalités Clés de WeeBat</h1>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h3>Devis & Factures Simplifiés</h3>
+        <p>
+          Créez vos devis en quelques clics, convertissez-les en factures 
+          sans ressaisir les informations, et envoyez-les directement à vos clients. 
+          Personnalisez vos documents avec votre logo et vos conditions pour renforcer votre image.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="/images/devis.jpg" alt="Devis" class="img-fluid rounded shadow" />
+      </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="row g-4">
+      <div class="col-md-6 order-md-2">
+        <h3>Planning de Chantiers</h3>
+        <p>
+          Visualisez en un clin d’œil l’avancement de vos chantiers, 
+          organisez le planning de vos équipes et gérez vos ressources. 
+          Une vue complète pour éviter les retards et les oublis.
+        </p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img src="/images/planning.jpg" alt="Planning" class="img-fluid rounded shadow" />
+      </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="text-center">
+      <h2 class="text-danger fw-bold mb-3">Et plus encore...</h2>
+      <p class="mb-4">
+        Suivi des paiements, relance automatique, gestion des achats,
+        accès collaboratif... WeeBat évolue en permanence pour vous offrir 
+        la meilleure expérience de gestion possible.
+      </p>
+      <a href="/auth/signup" class="btn btn-danger btn-lg rounded-pill px-5">
+        Essai Gratuit 7 Jours
+      </a>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

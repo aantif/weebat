@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <%- include('partials/head', { title: 'WeeBat - Accueil' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="container my-5">
+    <h1 class="text-danger fw-bold">Tarifs & Abonnements</h1>
+    <p class="fs-5">
+      Chez WeeBat, nous croyons en la simplicité : une formule unique, à <strong>9,99 € / mois</strong>,
+      qui inclut toutes les fonctionnalités sans engagement. Profitez d’abord de <strong>7 jours d’essai gratuit</strong>.
+    </p>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="p-4 bg-light rounded shadow text-center">
+          <h3 class="text-danger mb-3">Offre WeeBat</h3>
+          <h1 class="display-5">9,99 €</h1>
+          <p class="text-muted">/mois après l'essai</p>
+          <hr />
+          <ul class="list-unstyled my-3">
+            <li>Accès illimité à toutes les fonctionnalités</li>
+            <li>Mises à jour incluses</li>
+            <li>Support par email</li>
+            <li>Résiliable à tout moment</li>
+          </ul>
+          <a href="/auth/signup" class="btn btn-danger btn-lg rounded-pill px-4">
+            Démarrer mon essai gratuit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

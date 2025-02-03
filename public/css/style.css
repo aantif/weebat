@@ -1,0 +1,245 @@
+/* public/css/style.css */
+
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Variables de couleurs */
+:root {
+  --main-red: #f44336; /* Rouge principal */
+  --main-white: #ffffff;
+  --gray-text: #555555;
+  --light-bg: #fdfdfd; 
+  --dark-bg: #212529;  /* pour le footer ou sections sombres */
+}
+
+/* Styles globaux */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--gray-text);
+}
+
+a {
+  color: var(--main-red);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-red);
+  text-decoration: underline;
+}
+
+/* ====== HEADER (NAVBAR) ====== */
+.navbar {
+  background-color: var(--main-white) !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  color: var(--main-red) !important;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.navbar-nav .nav-link {
+  color: #333 !important;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--main-red) !important;
+}
+
+.btn-demo {
+  background-color: var(--main-red) !important;
+  color: var(--main-white) !important;
+  border-radius: 25px;
+  padding: 6px 18px;
+}
+
+/* ====== HERO SECTION (Bloc blanc + Formulaire) ====== */
+.hero-section {
+  background-color: var(--main-white);
+  padding: 60px 20px;
+}
+
+.hero-title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero-list {
+  list-style: none;
+  padding: 0;
+}
+
+.hero-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.hero-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--main-red);
+}
+
+.hero-form {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.hero-form h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 20px !important;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+
+.btn-submit {
+  background-color: var(--main-red) !important;
+  color: var(--main-white) !important;
+  border-radius: 20px;
+  width: 100%;
+  font-weight: 500;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: var(--main-red);
+}
+
+/* ====== SECTION ROUGE (CTA) ====== */
+.red-section {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.red-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.red-section p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.btn-white-cta {
+  background-color: var(--main-white);
+  color: var(--main-red);
+  border-radius: 25px;
+  padding: 10px 30px;
+  border: 2px solid var(--main-white);
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-white-cta:hover {
+  background-color: transparent;
+  color: var(--main-white);
+  border-color: var(--main-white);
+}
+
+/* ====== SECTION AVANTAGES / FONCTIONNALITÉS ====== */
+.advantages-section {
+  padding: 60px 20px;
+  background-color: var(--light-bg);
+}
+
+.advantage-box {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.advantage-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.advantage-box h4 {
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.advantage-box p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.advantage-icon {
+  font-size: 2rem;
+  color: var(--main-red);
+  margin-bottom: 10px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: var(--dark-bg);
+  color: #ccc;
+  padding: 30px 20px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+  }
+}

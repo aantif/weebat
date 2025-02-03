@@ -1,0 +1,44 @@
+<!-- views/partials/footer.ejs -->
+<footer>
+    <div class="container text-center">
+      <div class="row mb-3">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5 class="text-danger">WeeBat</h5>
+          <p class="small text-secondary">
+            L’outil de gestion dédié aux pros du bâtiment.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5 class="text-danger">Navigation</h5>
+          <ul class="list-unstyled">
+            <li><a href="/" class="text-secondary">Accueil</a></li>
+            <li><a href="/features" class="text-secondary">Fonctionnalités</a></li>
+            <li><a href="/pricing" class="text-secondary">Tarifs</a></li>
+            <li><a href="/contact" class="text-secondary">Contact</a></li>
+            <li><a href="/demo" class="text-secondary">Démo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-danger">Essai gratuit</h5>
+          <p class="small text-secondary">
+            Profitez de 7 jours d’essai pour découvrir WeeBat.
+          </p>
+          <a href="/auth/signup" class="btn btn-danger btn-sm rounded-pill px-3">
+            Démarrer mon essai
+          </a>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <p class="mb-0 small text-muted">
+        &copy; <%= new Date().getFullYear() %> WeeBat - Tous droits réservés.
+      </p>
+      <p>
+        <a href="#">Mentions légales</a> | 
+        <a href="#">Conditions d’utilisation</a> | 
+        <a href="#">Contact</a>
+      </p>
+    </div>
+  </footer>
+  
